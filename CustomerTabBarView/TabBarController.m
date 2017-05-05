@@ -34,14 +34,25 @@
     UIViewController *testvc2 = [board instantiateViewControllerWithIdentifier:@"testvc2"];
     UIViewController *testvc3 = [board instantiateViewControllerWithIdentifier:@"testvc3"];
     
-    //    testvc.delegate = self;
-    [self setViewControllers:@[testvc,testvc2,testvc3]];
+    UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:testvc];
     
-    [self setSelectedViewController:testvc];
+    [self setViewControllers:@[navi,testvc2,testvc3]];
+    
+    [self setSelectedViewController:navi];
+    
+    //    testvc.delegate = self;
     
     NSLog(@"tab bar address:%f,%f,%f,%f",self.tabBar.frame.origin.x,self.tabBar.frame.origin.y,self.tabBar.frame.size.width,self.tabBar.frame.size.height);
     
+    [self printData];
+}
+
+-(void)printData{
     
+    CGFloat navig_bar_x = self.navigationController.navigationBar.bounds.origin.x;
+    CGFloat navig_bar_y = self.navigationController.navigationBar.bounds.origin.y;
+    CGFloat navig_bar_height = self.navigationController.navigationBar.bounds.size.height;
+    NSLog(@"navigation bar x:%f,y:%f,height:%f",navig_bar_x,navig_bar_y,navig_bar_height);
 }
 
 -(void)initTabBar{
@@ -49,6 +60,7 @@
     CGFloat screenHeight = rx.size.height;
     CGFloat screenWidth  = rx.size.width;
     NSLog(@"screen width:%f,height:%f:",screenWidth,screenHeight);
+    
     
     _tab_bar_view = [[UIView alloc] initWithFrame:CGRectMake(0, screenHeight - 50, screenWidth, 50)];
     
@@ -107,6 +119,7 @@
     }
     
 }
+
 
 
 @end

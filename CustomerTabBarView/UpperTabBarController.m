@@ -92,6 +92,7 @@
     [self initTabButton:_secondButton buttonTag:1];
     [self initTabButton:_thirdButton  buttonTag:2];
     
+    
     [_tab_bar_view addSubview:_firstButton];
     [_tab_bar_view addSubview:_secondButton];
     [_tab_bar_view addSubview:_thirdButton];
@@ -111,8 +112,9 @@
     
     //label
     [self initTextView:_firstButton title:@"All" tag:0];
+    [self initTextView:_secondButton title:@"Wired" tag:1];
+    [self initTextView:_thirdButton title:@"Wireless" tag:2];
     
-//    [_tab_bar_view addSubview:_firstLabel];
     
     //triangle indicator
     [self initTriangleView];
@@ -136,19 +138,23 @@
     
     button.backgroundColor = [UIColor lightGrayColor];
     [button addTarget:self action:@selector(selectedTab:) forControlEvents:UIControlEventTouchUpInside];
-
     
 }
 
 -(void)initImageView:(UIImageView *)imageView superView:(UIView *) superView tag:(int)i{
-    imageView.frame = CGRectMake(10 + i * superView.frame.size.width, superView.frame.size.height*0.15, superView.frame.size.width*0.6, superView.frame.size.height*0.4);
+    CGFloat imageViewWidth = superView.frame.size.width*0.6;
+    imageView.frame = CGRectMake( (superView.frame.size.width/2-imageViewWidth/2) + i * superView.frame.size.width, superView.frame.size.height*0.15, imageViewWidth, superView.frame.size.height*0.4);
     imageView.tag = i;
     
 }
 
 -(void)initTextView:(UIView *) superView title:(NSString *)title tag:(int)i{
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(superView.frame.size.width/2-20 + i * superView.frame.size.width, superView.frame.size.height*0.6, superView.frame.size.width*0.3, superView.frame.size.height*0.2)];
+    
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0 + i * superView.frame.size.width, superView.frame.size.height*0.6, superView.frame.size.width, superView.frame.size.height*0.2)];
+    
     label.text = title;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.font = [UIFont boldSystemFontOfSize:15];
     label.tag = i;
     
     [self.view addSubview:label];

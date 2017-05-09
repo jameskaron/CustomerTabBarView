@@ -50,6 +50,8 @@
     UIViewController *uppervc2 = [board instantiateViewControllerWithIdentifier:@"upper_testvc2"];
     UIViewController *uppervc3 = [board instantiateViewControllerWithIdentifier:@"upper_testvc3"];
     
+//    UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:uppervc];
+    
     //    testvc.delegate = self;
     [self setViewControllers:@[uppervc,uppervc2,uppervc3]];
     

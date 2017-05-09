@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4C3CEFC91EB9867B00B041AD /* UpperTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3CEFC81EB9867B00B041AD /* UpperTabBarController.m */; };
 		4C3CEFCD1EB9CB0A00B041AD /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3CEFCC1EB9CB0A00B041AD /* CustomView.m */; };
+		4C3CEFD61EC177B100B041AD /* itemOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3CEFD51EC177B100B041AD /* itemOneViewController.m */; };
 		4CA2C5831EB8377700DFD9EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA2C5821EB8377700DFD9EC /* main.m */; };
 		4CA2C5861EB8377700DFD9EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA2C5851EB8377700DFD9EC /* AppDelegate.m */; };
 		4CA2C5891EB8377700DFD9EC /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA2C5881EB8377700DFD9EC /* TabBarController.m */; };
@@ -22,6 +23,8 @@
 		4C3CEFC81EB9867B00B041AD /* UpperTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpperTabBarController.m; sourceTree = "<group>"; };
 		4C3CEFCB1EB9CB0A00B041AD /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
 		4C3CEFCC1EB9CB0A00B041AD /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		4C3CEFD41EC177B100B041AD /* itemOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = itemOneViewController.h; sourceTree = "<group>"; };
+		4C3CEFD51EC177B100B041AD /* itemOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = itemOneViewController.m; sourceTree = "<group>"; };
 		4CA2C57E1EB8377700DFD9EC /* CustomerTabBarView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomerTabBarView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CA2C5821EB8377700DFD9EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CA2C5841EB8377700DFD9EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 				4CA2C5811EB8377700DFD9EC /* Supporting Files */,
 				4C3CEFC71EB9867B00B041AD /* UpperTabBarController.h */,
 				4C3CEFC81EB9867B00B041AD /* UpperTabBarController.m */,
+				4C3CEFD41EC177B100B041AD /* itemOneViewController.h */,
+				4C3CEFD51EC177B100B041AD /* itemOneViewController.m */,
 			);
 			path = CustomerTabBarView;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3CEFD61EC177B100B041AD /* itemOneViewController.m in Sources */,
 				4C3CEFCD1EB9CB0A00B041AD /* CustomView.m in Sources */,
 				4CA2C5891EB8377700DFD9EC /* TabBarController.m in Sources */,
 				4CA2C5861EB8377700DFD9EC /* AppDelegate.m in Sources */,

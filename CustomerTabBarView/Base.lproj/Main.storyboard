@@ -40,7 +40,7 @@
         <!--Item 1-->
         <scene sceneID="hHZ-gG-A7Z">
             <objects>
-                <viewController storyboardIdentifier="testvc" id="ywI-dC-xAM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="testvc" id="ywI-dC-xAM" customClass="itemOneViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="chZ-Z0-lCh"/>
                         <viewControllerLayoutGuide type="bottom" id="MJk-qn-Lqh"/>
@@ -57,11 +57,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wE7-ai-lL1">
-                                <rect key="frame" x="143" y="342" width="46" height="30"/>
+                                <rect key="frame" x="41" y="342" width="216" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="To upperTabBar"/>
                                 <connections>
-                                    <segue destination="k8T-hb-2Fy" kind="push" id="5Xr-Tx-Tdi"/>
+                                    <action selector="click2UpperTabBarController:" destination="ywI-dC-xAM" eventType="touchUpInside" id="vAK-bO-fha"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -132,7 +132,7 @@
         <!--Upper Tab Bar Controller-->
         <scene sceneID="pr5-qY-0lu">
             <objects>
-                <tabBarController id="k8T-hb-2Fy" customClass="UpperTabBarController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="upper_tab_bar_vc" id="k8T-hb-2Fy" customClass="UpperTabBarController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="6Ts-1V-Wcd"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="xM0-hA-bgh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>

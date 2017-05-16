@@ -10,12 +10,14 @@
 
 @interface TabBarController ()
 
-@property(retain,nonatomic) UIView *tab_bar_view;
+//@property(retain,nonatomic) UIView *tab_bar_view;
 @property(retain,nonatomic) UIButton *firstButton;
 @property(retain,nonatomic) UIButton *secondButton;
 @property(retain,nonatomic) UIButton *thirdButton;
 
 @end
+
+UIView *tab_bar_view;
 
 @implementation TabBarController
 
@@ -62,11 +64,11 @@
     NSLog(@"screen width:%f,height:%f:",screenWidth,screenHeight);
     
     
-    _tab_bar_view = [[UIView alloc] initWithFrame:CGRectMake(0, screenHeight - 50, screenWidth, 50)];
+    tab_bar_view = [[UIView alloc] initWithFrame:CGRectMake(0, screenHeight - 50, screenWidth, 50)];
     
-    _tab_bar_view.backgroundColor = [UIColor whiteColor];
+    tab_bar_view.backgroundColor = [UIColor whiteColor];
     
-    [self.view addSubview:_tab_bar_view];
+    [self.view addSubview:tab_bar_view];
     
     _firstButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _secondButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -76,9 +78,9 @@
     [self initTabButton:_secondButton title:@"item2" buttonTag:1];
     [self initTabButton:_thirdButton title:@"item3" buttonTag:2];
     
-    [_tab_bar_view addSubview:_firstButton];
-    [_tab_bar_view addSubview:_secondButton];
-    [_tab_bar_view addSubview:_thirdButton];
+    [tab_bar_view addSubview:_firstButton];
+    [tab_bar_view addSubview:_secondButton];
+    [tab_bar_view addSubview:_thirdButton];
     
     _firstButton.backgroundColor = [UIColor blackColor];
     
@@ -86,11 +88,11 @@
 
 -(void)initTabButton:(UIButton*)button title:(NSString *) title buttonTag:(int) i {
     if (i == 0) {
-        button.frame = CGRectMake(0, _tab_bar_view.bounds.origin.y, _tab_bar_view.bounds.size.width/3-1, 50);
+        button.frame = CGRectMake(0, tab_bar_view.bounds.origin.y, tab_bar_view.bounds.size.width/3-1, 50);
     }else if(i == 2){
-        button.frame = CGRectMake(i * _tab_bar_view.bounds.size.width/3, _tab_bar_view.bounds.origin.y, _tab_bar_view.bounds.size.width/3, 50);
+        button.frame = CGRectMake(i * tab_bar_view.bounds.size.width/3, tab_bar_view.bounds.origin.y, tab_bar_view.bounds.size.width/3, 50);
     }else{
-        button.frame = CGRectMake(i * _tab_bar_view.bounds.size.width/3, _tab_bar_view.bounds.origin.y, _tab_bar_view.bounds.size.width/3-1, 50);
+        button.frame = CGRectMake(i * tab_bar_view.bounds.size.width/3, tab_bar_view.bounds.origin.y, tab_bar_view.bounds.size.width/3-1, 50);
     }
     button.tag = i;
     button.backgroundColor = [UIColor lightGrayColor];
@@ -120,6 +122,9 @@
     
 }
 
-
++(void)hiddenTabBarView{
+    [tab_bar_view setHidden:YES];
+    
+}
 
 @end

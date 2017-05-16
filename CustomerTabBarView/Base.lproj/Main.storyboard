@@ -37,10 +37,38 @@
             </objects>
             <point key="canvasLocation" x="50" y="499"/>
         </scene>
+        <!--test_remove_tab_bar-->
+        <scene sceneID="vxF-IZ-K4W">
+            <objects>
+                <viewController id="ovF-Ca-ra4" userLabel="test_remove_tab_bar" customClass="TestRemoveTabBarViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dOI-xP-UXY"/>
+                        <viewControllerLayoutGuide type="bottom" id="VMk-XH-N3d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dw2-DI-czf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test remove tab bar view" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Srb-RC-qfP">
+                                <rect key="frame" x="86" y="210" width="202" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wlZ-30-4ad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tfp-a0-BQV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-738.39999999999998" y="-500.59970014992507"/>
+        </scene>
         <!--Item 1-->
         <scene sceneID="hHZ-gG-A7Z">
             <objects>
-                <viewController storyboardIdentifier="testvc" id="ywI-dC-xAM" customClass="itemOneViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="testvc" id="ywI-dC-xAM" customClass="ItemOneViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="chZ-Z0-lCh"/>
                         <viewControllerLayoutGuide type="bottom" id="MJk-qn-Lqh"/>
@@ -62,6 +90,14 @@
                                 <state key="normal" title="To upperTabBar"/>
                                 <connections>
                                     <action selector="click2UpperTabBarController:" destination="ywI-dC-xAM" eventType="touchUpInside" id="vAK-bO-fha"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXb-dJ-Mky">
+                                <rect key="frame" x="95" y="185" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="to remove tab bar"/>
+                                <connections>
+                                    <segue destination="ovF-Ca-ra4" kind="push" id="D6q-XH-kPh"/>
                                 </connections>
                             </button>
                         </subviews>

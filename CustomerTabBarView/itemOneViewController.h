@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface itemOneViewController : UIViewController
+@interface ItemOneViewController : UIViewController
 
 @end

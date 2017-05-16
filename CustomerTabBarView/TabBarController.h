@@ -10,6 +10,9 @@
 
 @interface TabBarController : UITabBarController
 
+//@property(retain,nonatomic) UIView *tab_bar_view;
+
++(void)hiddenTabBarView;
 
 @end
 

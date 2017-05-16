@@ -6,14 +6,14 @@
 //  Copyright © 2017 pccw. All rights reserved.
 //
 
-#import "itemOneViewController.h"
+#import "ItemOneViewController.h"
 #import "UpperTabBarController.h"
 
-@interface itemOneViewController ()
+@interface ItemOneViewController ()
 
 @end
 
-@implementation itemOneViewController
+@implementation ItemOneViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

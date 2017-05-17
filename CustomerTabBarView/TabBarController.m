@@ -27,6 +27,8 @@ UIView *tab_bar_view;
     [self initTabBarController];
     
     [self initTabBar];
+    
+    [self setSelectedButton:_secondButton];
 }
 
 -(void)initTabBarController{
@@ -40,7 +42,8 @@ UIView *tab_bar_view;
     
     [self setViewControllers:@[navi,testvc2,testvc3]];
     
-    [self setSelectedViewController:navi];
+//    [self setSelectedViewController:navi];
+//    [self setSelectedViewController:testvc2];
     
     //    testvc.delegate = self;
     
@@ -125,6 +128,15 @@ UIView *tab_bar_view;
 +(void)hiddenTabBarView{
     [tab_bar_view setHidden:YES];
     
+}
+
+-(void)setSelectedButton:(UIButton *)button{
+    _firstButton.backgroundColor = [UIColor lightGrayColor];
+    _secondButton.backgroundColor = [UIColor lightGrayColor];
+    _thirdButton.backgroundColor = [UIColor lightGrayColor];
+    
+    button.backgroundColor = [UIColor blackColor];
+    self.selectedIndex = button.tag;
 }
 
 @end

@@ -41,6 +41,8 @@
     
     [self initTabBar];
     
+    [self setSelectedButton:_cv2];
+    
 }
 
 -(void)initUpperTabBarController{
@@ -55,7 +57,8 @@
     //    testvc.delegate = self;
     [self setViewControllers:@[uppervc,uppervc2,uppervc3]];
     
-    [self setSelectedViewController:uppervc];
+//    [self setSelectedViewController:uppervc];
+    
     
     NSLog(@"tab bar address:%f,%f,%f,%f",self.tabBar.frame.origin.x,self.tabBar.frame.origin.y,self.tabBar.frame.size.width,self.tabBar.frame.size.height);
     self.navigationController.navigationBar.translucent = NO;
@@ -124,9 +127,9 @@
 }
 
 -(void)initTriangleView{
-    _cv = [self addTriangleView:_firstButton];
-    _cv2 = [self addTriangleView:_secondButton];
-    _cv3 = [self addTriangleView:_thirdButton];
+    _cv = [self addTriangleView:_firstButton tag:0];
+    _cv2 = [self addTriangleView:_secondButton tag:1];
+    _cv3 = [self addTriangleView:_thirdButton tag:2];
     
     [_cv2 setHidden:YES];
     [_cv3 setHidden:YES];
@@ -181,15 +184,25 @@
     
 }
 
--(CustomView *)addTriangleView:(UIView *)superView{
+-(CustomView *)addTriangleView:(UIView *)superView tag:(int)tag{
     NSLog(@"super view x:%f,y:%f,width:%f,height:%f",superView.frame.origin.x,superView.frame.origin.y,superView.frame.size.width,superView.frame.size.height);
     
     CustomView *customView = [[CustomView alloc] initWithFrame:CGRectMake(superView.frame.size.width/2-10 + superView.tag*superView.frame.size.width, superView.frame.size.height-20, 20, 20)];
     
+    customView.tag = tag;
     customView.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:customView];
     
     return customView;
+}
+
+-(void)setSelectedButton:(UIView *)view{
+    [_cv setHidden:YES];
+    [_cv2 setHidden:YES];
+    [_cv3 setHidden:YES];
+    
+    self.selectedIndex = view.tag;
+    [view setHidden:NO];
 }
 
 @end

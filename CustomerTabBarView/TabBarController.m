@@ -47,6 +47,8 @@ UIView *tab_bar_view;
     
     //    testvc.delegate = self;
     
+    self.tabBar.hidden = YES;
+    
     NSLog(@"tab bar address:%f,%f,%f,%f",self.tabBar.frame.origin.x,self.tabBar.frame.origin.y,self.tabBar.frame.size.width,self.tabBar.frame.size.height);
     
     [self printData];

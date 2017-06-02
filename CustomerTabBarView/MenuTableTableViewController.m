@@ -19,7 +19,7 @@
     [super viewDidLoad];
     
     // 背景透明
-    self.view.backgroundColor = [UIColor clearColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     // 清除多余的分割线
     [self.tableView setTableFooterView:[[UIView alloc]initWithFrame:CGRectZero]];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];

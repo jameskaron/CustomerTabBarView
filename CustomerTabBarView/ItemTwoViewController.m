@@ -9,6 +9,8 @@
 #import "ItemTwoViewController.h"
 #import "MenuTableTableViewController.h"
 
+#define screen_height [UIScreen mainScreen].bounds.size.height
+
 @interface ItemTwoViewController ()<DropDownMenuDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *dropDownMenuTextView;
@@ -41,16 +43,20 @@
     CGFloat textView_width  = _dropDownMenuTextView.frame.size.width;
     CGFloat textView_height = _dropDownMenuTextView.frame.size.height;
     
-    _dropDownMenuTable.view.frame = CGRectMake(textView_x, textView_y + textView_height, textView_width, textView_height);
+    _dropDownMenuTable.view.frame = CGRectMake(textView_x, textView_y + textView_height, textView_width, 0.15*screen_height);
+    
 }
 
+
 -(void)initData{
-    _dataSource = @[@"1",@"2",@"3"];
+    _dataSource = @[@"1",@"2",@"3",@"4",@"5"];
 }
 
 - (IBAction)openDropDownMenu:(UIButton *)sender {
     _dropDownMenuTable.isOpen = !_dropDownMenuTable.isOpen;
     [_dropDownMenuTable.tableView reloadData];
+    //处理滚动条
+    [_dropDownMenuTable.tableView performSelector:@selector(flashScrollIndicators) withObject:nil afterDelay:0];
 }
 
 
